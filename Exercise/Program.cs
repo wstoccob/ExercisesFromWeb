@@ -5,14 +5,14 @@ internal class Exercise
     public static void Main(string[] args)
     {
         // int input = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine(Check(30, 0));
-        Console.WriteLine(Check(25, 5));
-        Console.WriteLine(Check(20, 30));
-        Console.WriteLine(Check(20, 25));
+        Console.WriteLine(Test(103));
+        Console.WriteLine(Test(90));
+        Console.WriteLine(Test(89));
+        Console.ReadLine();
     }
 
-    public static bool Check(int num1, int num2)
+    public static bool Test(int num)
     {
-        return (num1 == 30 || num2 == 30 || num1 + num2 == 30);
+        return (Math.Abs(num - 100) <= 10) || (Math.Abs(num - 200) <= 10);
     }
 }
