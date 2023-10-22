@@ -4,16 +4,15 @@ internal class Exercise
 {
     public static void Main(string[] args)
     {
-        while (true)
-        {
-            int input = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine(AbsDif(input));
-        }
+        // int input = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(Check(30, 0));
+        Console.WriteLine(Check(25, 5));
+        Console.WriteLine(Check(20, 30));
+        Console.WriteLine(Check(20, 25));
     }
 
-    public static int AbsDif(int num)
+    public static bool Check(int num1, int num2)
     {
-        return (num > 51) ? 3 * (num - 51) : 51 - num;
+        return (num1 == 30 || num2 == 30 || num1 + num2 == 30);
     }
 }
