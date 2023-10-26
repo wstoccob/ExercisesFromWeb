@@ -4,15 +4,19 @@ internal class Exercise
 {
     public static void Main(string[] args)
     {
-        // int input = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine(Test(103));
-        Console.WriteLine(Test(90));
-        Console.WriteLine(Test(89));
-        Console.ReadLine();
+        Fibonachi(40);
     }
 
-    public static bool Test(int num)
+    public static void Fibonachi(int num)
     {
-        return (Math.Abs(num - 100) <= 10) || (Math.Abs(num - 200) <= 10);
+        int first = 1, second = 1;
+        int third;
+        for (int i = 0; i < num; i++)
+        {
+            third = first + second;
+            Console.WriteLine($"{third} and a ratio is {(decimal) third / second}");
+            first = second;
+            second = third;
+        }
     }
 }
